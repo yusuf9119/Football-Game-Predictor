@@ -50,16 +50,21 @@ cleaneddata = rawmatchstats.dropna()
 
 
 #splitting the dataset to training and testing
-X = cleaneddata[features]
-y = cleaneddata[target]
+
+X = cleaneddata['home_team_goal_count']
+y = cleaneddata['home_team_shots']
 X_train,X_test,y_train,y_test = train_test_split(X,y, test_size = 0.2,random_state=12)
 
+X_train = np.array(X_train).reshape(-1,1)
+y_train = np.array(y_train).reshape(-1,1)
+X_test = np.array(X_test).reshape(-1,1)
+y_test = np.array(y_test).reshape(-1,1)
 
 #building models
 #Linearreg
 linearmodel = LinearRegression()
 linearmodel.fit(X_train,y_train)
-linearpredictions = linearmode.predict(X_test)
+linearpredictions = linearmodel.predict(X_test)
 
 #KNN
 knnmodel = KNeighborsRegressor()
