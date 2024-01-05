@@ -7,7 +7,7 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.svm import SVR
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import mean_squared_error,r2_score
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 
 
@@ -115,32 +115,32 @@ print(f"R-Squared (R2) {svmr2}")
 
 plt.figure(figsize=(8,6))
 plt.scatter(y_test,linearpredictions,color='blue')
-plt.xlabel('actualvalues')
-plt.ylavle('predicted values')
-plt.title('linear regression: actual vs predicted home team goals')
+plt.xlabel('actual goals scored')
+plt.ylabel('predicted goals from shots')
+plt.title('Linear Regresssion: Premier League goals per shot predictions')
 plt.show()
 
 
 plt.figure(figsize=(8,6))
 plt.scatter(y_test,knnnpredictions,color='red')
-plt.xlabel('actual values')
-plt.ylabel('predicted values')
-plt.title('K Nearest Neightbours: Actual vs Predicted home team goals')
+plt.xlabel('actual goals scored')
+plt.ylabel('predicted goals from shots')
+plt.title('K Nearest Neightbours: Premier League goals per shot predictions')
 plt.show()
 
 plt.figure(figsize=(8,6))
 plt.scatter(y_test,rfpredictions,color='green')
-plt.xlabel('actual values')
-plt.ylabel('predicted values')
-plt.title('Random Forest Regressor: actual vs predicted goals')
+plt.xlabel('actual goals scored')
+plt.ylabel('predicted goals from shots')
+plt.title('Random Forest Regressor: Premier League goals per shot predictions')
 plt.show()
 
 
 plt.figure(figsize=(8,6))
 plt.scatter(y_test,svmpredictions,color='yellow')
-plt.xlabel('actual values')
-plt.ylabel('predicted values')
-plt.title('SVR : actual vs predicted goals')
+plt.xlabel('actual goals scored')
+plt.ylabel('predicted goals from shots')
+plt.title('SVR : Premier League goals per shot predictions')
 plt.show()
 
 
