@@ -126,12 +126,21 @@ plt.scatter(y_test,knnnpredictions,color='red')
 plt.xlabel('actual values')
 plt.ylabel('predicted values')
 plt.title('K Nearest Neightbours: Actual vs Predicted home team goals')
-
+plt.show()
 
 plt.figure(figsize=(8,6))
 plt.scatter(y_test,rfpredictions,color='green')
 plt.xlabel('actual values')
 plt.ylabel('predicted values')
 plt.title('Random Forest Regressor: actual vs predicted goals')
+plt.show()
+
+
+plt.figure(figsize=(8,6))
+plt.scatter(y_test,svmpredictions,color='yellow')
+plt.xlabel('actual values')
+plt.ylabel('predicted values')
+plt.title('SVR : actual vs predicted goals')
+plt.show()
 
 
